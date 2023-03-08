@@ -38,6 +38,7 @@ $Nato: "Noto Serif Display", serif;
   color: $textColor;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 @mixin shadow {
@@ -111,5 +112,6 @@ small {
 @import "./PageStyles/bigText";
 @import "./PageStyles/membership";
 @import "./PageStyles/ourWorks";
+@import "./ComponentStyles/footer";
 
 //External Files---------------❌❌------------------------------

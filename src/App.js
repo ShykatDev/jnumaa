@@ -1,6 +1,6 @@
 import "./Styles/app.scss";
 
-import { Navbar } from "./Components";
+import { Footer, Navbar } from "./Components";
 import { Community, Home } from "./Pages";
 import About from "./Pages/About";
 import AlumniList from "./Pages/AlumniList";
@@ -21,6 +21,7 @@ function App() {
       <BigText />
       <OurWorks />
       <Membership />
+      <Footer />
     </div>
   );
 }

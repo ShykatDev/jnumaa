@@ -1,0 +1,54 @@
+#remember {
+  @include basicStyle(85vh, 10rem, 0rem);
+  position: relative;
+
+  h1 {
+    color: $dark;
+    text-align: center;
+    span {
+      color: $iconBg;
+    }
+  }
+  p {
+    text-align: center;
+  }
+
+  .rememberBanner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .remeberSection {
+    width: 70%;
+    height: 55%;
+    background: $dark;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    button {
+      width: 10rem;
+      height: 2.5rem;
+      position: absolute;
+      top: -5%;
+      left: 50%;
+      transform: translate(-50%, 5%);
+      @include buttonStyles($primary, $iconBg);
+      border-radius: 0.3rem;
+      transition: 0.3s ease;
+
+      &:hover {
+        &:hover {
+          background: #561ec7;
+        }
+      }
+    }
+  }
+}
