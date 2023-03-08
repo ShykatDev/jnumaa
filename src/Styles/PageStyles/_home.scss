@@ -1,0 +1,79 @@
+#home {
+  @include basicStyle(100vh, 0, 15rem);
+  @include flexStyles(start, center);
+  flex-direction: column;
+  position: relative;
+  background-image: url("../../assets/homeBg.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .content {
+    width: 100%;
+    height: auto;
+    @include flexStyles(start, center);
+    flex-direction: column;
+    margin-top: 12vh;
+
+    h1 {
+      margin-top: 5rem;
+      font-size: 3rem;
+      color: $dark;
+      text-align: center;
+      span {
+        @include gradientText;
+      }
+    }
+    p {
+      width: 70%;
+      text-align: center;
+      font-size: 1rem;
+      font-family: $Inter;
+      margin-top: 1rem;
+    }
+
+    .buttonGrp {
+      width: auto;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        padding: 0.8rem 1.3rem;
+        border-radius: 0.4rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin: 3rem 1rem 0 1rem;
+        border: 1px solid #5148cd;
+        transition: all 0.3s ease;
+      }
+
+      .joinBtn {
+        background: $gradient;
+        color: white;
+
+        &:hover {
+          background: linear-gradient($dark, $dark);
+          color: whitesmoke;
+        }
+      }
+      .registerBtn {
+        background: none;
+        &:hover {
+          background: $dark;
+          color: whitesmoke;
+        }
+      }
+    }
+  }
+
+  .homeBanner {
+    position: absolute;
+    bottom: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    object-fit: cover;
+  }
+}

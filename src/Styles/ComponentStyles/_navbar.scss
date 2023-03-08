@@ -1,0 +1,69 @@
+#navbar {
+  width: 100%;
+  height: 10vh;
+  background: #f8f8f876;
+  backdrop-filter: blur(7px);
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  padding: 0 15rem;
+  font-family: $Inter;
+  font-weight: 400;
+  @include flexStyles(space-between, center);
+  @include shadow;
+
+  .logoSection {
+    width: 5%;
+    height: 100%;
+    @include flexStyles(center, center);
+    .logo {
+      width: 80%;
+    }
+  }
+
+  .menuSection {
+    width: auto;
+    height: 100%;
+
+    .desktopMenu {
+      height: 100%;
+      @include flexStyles(space-between, center);
+
+      ul {
+        width: 100%;
+        height: 100%;
+        @include flexStyles(space-between, center);
+        li {
+          padding: 0.5rem 1rem;
+          transition: 0.3s ease;
+          cursor: pointer;
+          border-radius: 0.3rem;
+          margin: 0 0.5rem;
+
+          &:hover {
+            background: $dark;
+            color: $primary;
+          }
+        }
+        li.active {
+          background: $dark;
+          color: $primary;
+        }
+      }
+
+      .loginBtn {
+        margin-left: 2rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-radius: 0.3rem;
+        font-size: 0.8rem;
+        @include buttonStyles($primary, $dark);
+      }
+    }
+    .mobileMenu {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.titleBorder {
+  width: 10%;
+  height: 2rem;
+  @include flexStyles(center, center);
+  margin: 0.5rem auto;
+  overflow: hidden;
+
+  .box,
+  .miniCircle,
+  .circle,
+  .dot {
+    margin: 0 0.2rem;
+    opacity: 0;
+  }
+
+  .box {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    background: #5f2dc4;
+    transform: translateX(-50px);
+    z-index: 4;
+    animation: boxAnim 1s infinite ease;
+    // animation-direction: alternate;
+  }
+  .miniCircle {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    background: #8446ff;
+    transform: translateX(-70px);
+    z-index: 3;
+    animation: miniCircleAnim 1s infinite ease;
+    // animation-direction: alternate;
+    animation-delay: 1s;
+  }
+  .circle {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    background: #9864ff;
+    transform: translateX(-90px);
+    z-index: 2;
+    animation: circleAnim 1s infinite ease;
+    // animation-direction: alternate;
+    animation-delay: 2s;
+  }
+  .dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    background: #bc9aff;
+    transform: translateX(-110px);
+    z-index: 1;
+    animation: dotAnim 1s infinite ease;
+    animation-delay: 3s;
+    // animation-direction: alternate;
+  }
+
+  @keyframes boxAnim {
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes miniCircleAnim {
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes circleAnim {
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes dotAnim {
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}

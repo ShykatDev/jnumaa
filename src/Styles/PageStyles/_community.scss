@@ -1,0 +1,79 @@
+#community {
+  @include basicStyle(100vh, 0, 15rem);
+
+  .cards {
+    width: 100%;
+    height: 70vh;
+    @include flexStyles(space-between, center);
+    padding: 3rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background: url("../../assets/homeBg.svg");
+    background-position: left;
+    background-size: cover;
+
+    .communityCard {
+      width: 45%;
+      height: 100%;
+      @include flexStyles(center, start);
+      flex-direction: column;
+      font-family: $Inter;
+
+      h4 {
+        color: $iconBg;
+        margin-top: 1rem;
+        font-weight: 600;
+        height: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        font-family: $Nato;
+        @include gradientText;
+        font-weight: 800;
+        height: 4rem;
+      }
+
+      h2,
+      small {
+        width: 80%;
+        margin-bottom: 0.4rem;
+      }
+
+      small {
+        height: 3rem;
+      }
+
+      .alumni {
+        width: 80%;
+        height: 44vh;
+        object-fit: cover;
+        object-position: center;
+        margin-top: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid $iconBg;
+      }
+    }
+  }
+
+  .extraCariculam {
+    font-family: $Inter;
+    height: 20vh;
+    width: 100%;
+    margin-top: 10vh;
+    @include flexStyles(space-between, center);
+
+    .activity {
+      width: 30%;
+      height: 70%;
+      padding: 0.5rem 0.8rem;
+      @include flexStyles(center, center);
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+
+      small {
+        margin-left: 1rem;
+      }
+    }
+  }
+}

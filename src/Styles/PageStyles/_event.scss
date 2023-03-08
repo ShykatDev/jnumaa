@@ -1,0 +1,85 @@
+#upcomingEvent {
+  @include basicStyle(80vh, 3rem, 0rem);
+  position: relative;
+  font-family: $Inter;
+
+  .eventSlice {
+    width: 100%;
+    height: 100%;
+    background: $dark;
+    background: url("../../assets/eventBg.svg");
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 15rem;
+    @include flexStyles(space-between, center);
+
+    .banner {
+      width: 47%;
+      height: 70%;
+      border-radius: 0.5rem;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .details {
+      width: 47%;
+      height: 70%;
+      @include flexStyles(space-between, start);
+      flex-direction: column;
+      h1 {
+        font-family: $Nato;
+        color: #a77cff;
+      }
+      small{
+        font-size: 1rem;
+        color: white;
+      }
+      p{
+        color: rgb(133, 133, 133);
+      }
+
+      .notification {
+        width: 100%;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+
+        input {
+          width: 27rem;
+          height: 2.4rem;
+          background: rgba(255, 255, 255, 0.263);
+          border-radius: 0.3rem;
+          border: none;
+          outline: none;
+          padding-left: 1rem;
+          color: white;
+        }
+
+        input::placeholder {
+          color: rgba(255, 255, 255, 0.459);
+        }
+
+        button {
+          width: 7rem;
+          height: 2.4rem;
+          border-radius: 0.3rem;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          background: $iconBg;
+          color: white;
+          transition: 0.3s;
+
+          &:hover {
+            background: #561ec7;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+#about {
+  @include basicStyle(110vh, 5rem, 15rem);
+
+  h1 {
+    color: $dark;
+    text-align: center;
+    span {
+      color: $iconBg;
+    }
+  }
+  p {
+    text-align: center;
+  }
+
+  section {
+    font-family: $Inter;
+    width: 100%;
+    height: 70vh;
+    margin-top: 5vh;
+
+    .grid-details {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto auto;
+      gap: 2rem;
+
+      .grid-item {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.3rem;
+
+        p {
+          text-align: left;
+        }
+      }
+      .gi1 {
+        grid-row: 1/3;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .gi2 {
+        grid-column: 2/-1;
+      }
+    }
+  }
+}
